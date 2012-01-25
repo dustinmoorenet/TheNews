@@ -1,7 +1,7 @@
 <article>
   <header><?php echo $article['Article']['title']; ?></header>
   <span>by <?php echo $article['Article']['author']; ?> -
-    <time datetime="<?php echo $article['Article']['published']; ?>">
+    <time pubdate="<?php echo $article['Article']['published']; ?>">
       <?php $date = new DateTime($article['Article']['published']);
         echo $date->format('F j, Y'); ?>
     </time>
@@ -12,16 +12,19 @@
 </article>
 
   <?php 
-  if ($article['neighbors']['prev']) {
-    echo $this->Html->link('Previous', array(
+  if ($article['neighbors']['prev']) { ?>
+    <span class="prev">
+    <?php echo $this->Html->link('Previous', array(
       'controller' => 'articles',
       'action' => 'view',
-      $article['neighbors']['prev']['Article']['id']));
-  }
-  if ($article['neighbors']['next']) {
-    echo $this->Html->link('Next', array(
+      $article['neighbors']['prev']['Article']['id'])); ?>
+    </span>
+  <?php }
+  if ($article['neighbors']['next']) { ?>
+    <span class="next">
+    <?php echo $this->Html->link('Next', array(
       'controller' => 'articles',
       'action' => 'view',
-      $article['neighbors']['next']['Article']['id']));
-  }
-  ?>
+      $article['neighbors']['next']['Article']['id'])); ?>
+    </span>
+  <?php } ?>

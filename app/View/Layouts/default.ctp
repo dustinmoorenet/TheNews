@@ -16,11 +16,12 @@
   </head>
 <body>
   <div id="container">
-    <header>The News</header>
+    <header><?php echo $this->Html->link('The News', '/'); ?></header>
     <section id="content">
       <?php echo $content_for_layout; ?>
     </section>
     <footer>
+      <span>&copy; 2012 Dustin Moore<span>
     </footer>
   </div>
 </body>

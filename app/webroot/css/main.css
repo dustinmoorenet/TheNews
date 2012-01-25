@@ -1,4 +1,105 @@
 #container {
   margin: 0 auto;
   width: 900px;
+  background: #fafafa;
+  padding: 20px;
+}
+
+#container > header {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+#container > header a,
+#container > header a:visited {
+  text-decoration: none;
+  color: #444;
+}
+
+#container > header a:hover {
+  color: #777;
+}
+
+article {
+  background: #444;
+  color: #fafafa;
+  color: rgba(255,255,255,.90);
+  padding: 5px;
+  margin: 0 0 10px;
+}
+
+article header {
+  font-weight: bold;
+  background: #fafafa;
+  background: rgba(255,255,255,.90);
+  color: #444;
+  padding: 5px;
+  margin: 0 0 3px;
+  font-size: 1.2em;
+}
+
+article > span {
+  font-size: .8em;
+}
+
+article > span time {
+  font-style: italic;
+}
+
+article section {
+  text-align: justify;
+}
+
+article div.read-more {
+  text-align: right;
+  padding: 5px 0;
+}
+
+article a,
+article a:visited {
+  color: #fafafa;
+  color: rgba(255,255,255,.90);
+  text-decoration: none;
+  border-bottom: dotted 1px #fafafa;
+  border-bottom: dotted 1px rgba(255,255,255,.90);
+}
+
+article a:hover {
+  color: #eee;
+  border: 0;
+}
+
+article p {
+  margin: 10px 0 0;
+}
+
+span a,
+span a:visited {
+  font-weight: bold;
+  color: #444;
+  color: rgba(0,0,0,.70);
+  text-decoration: none;
+  border-bottom: dotted 1px #444;
+  border-bottom: dotted 1px rgba(0,0,0,.40);
+}
+
+span a:hover {
+  color: #eee;
+  color: rgba(0,0,0,.60);
+  border: 0;
+}
+
+span.prev {
+  float: left;
+}
+
+span.next {
+  float: right;
+}
+
+footer {
+  margin: 30px 0 10px;
+  text-align: center;
 }

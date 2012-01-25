@@ -2,18 +2,19 @@
 <article>
   <header><?php echo $article['Article']['title']; ?></header>
   <span>by <?php echo $article['Article']['author']; ?> -
-    <time datetime="<?php echo $article['Article']['published']; ?>">
+    <time pubdate="<?php echo $article['Article']['published']; ?>">
       <?php $date = new DateTime($article['Article']['published']);
         echo $date->format('F j, Y'); ?>
     </time>
   </span>
   <section>
-    <?php echo $article['Article']['body']; ?>...
-    <br />
+    <?php echo $article['Article']['body']; ?>...</p>
+    <div class="read-more">
     <?php echo $this->Html->link('Read More', array(
       'controller' => 'articles',
       'action' => 'view',
       $article['Article']['id'])); ?>
+    </div>
   </section>
 </article>
 <?php endforeach; ?>
