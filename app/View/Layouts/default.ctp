@@ -16,18 +16,12 @@
   </head>
 <body>
   <div id="container">
-    <div id="header">
-    </div>
-    <div id="content">
-    
-      <?php echo $this->Session->flash(); ?>
-      
+    <header>The News</header>
+    <section id="content">
       <?php echo $content_for_layout; ?>
-    
-    </div>
-    <div id="footer">
-    </div>
+    </section>
+    <footer>
+    </footer>
   </div>
-  <?php echo $this->element('sql_dump'); ?>
 </body>
 </html>
