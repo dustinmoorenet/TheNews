@@ -6,7 +6,7 @@ class ArticlesController extends AppController {
   public $paginate = array(
     'limit' => 5,
     'order' => array(
-      'Article.published' => 'asc'
+      'Article.published' => 'desc'
     )
   );
 
