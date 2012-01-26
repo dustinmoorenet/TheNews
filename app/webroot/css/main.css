@@ -32,7 +32,13 @@ body {
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-  margin: 0 0 30px;
+  padding: 10px 0;
+  margin: 0 0 20px;
+  border: solid 2px #444;
+  border: solid 2px rgba(0,0,0,.70);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 #container > header a,
@@ -43,6 +49,10 @@ body {
 
 #container > header a:hover {
   color: #777;
+}
+
+p {
+  margin: 10px 0 0;
 }
 
 article,
@@ -95,15 +105,12 @@ article a:visited {
   text-decoration: none;
   border-bottom: dotted 1px #fafafa;
   border-bottom: dotted 1px rgba(255,255,255,.90);
+  cursor: pointer;
 }
 
 article a:hover {
   color: #eee;
   border: 0;
-}
-
-article p {
-  margin: 10px 0 0;
 }
 
 span a,
@@ -138,6 +145,12 @@ span.next {
 
 .show-more:hover {
   background: #666;
+}
+
+.off-sight {
+  position: absolute;
+  top: -2000px;
+  right: -2000px;
 }
 
 footer {

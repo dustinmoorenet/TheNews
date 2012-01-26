@@ -13,39 +13,75 @@ $(function() {
 
     function showMoreClicked(e) {
       $(e.currentTarget).remove();
-      $.get(_url, function(text) {
-        var $more = $(text);
-        $('#content').append($more.find('article'));
+      $.get(_url, function(html) {
+        var $more = $(html);
+        $('#content').append($more.find('article').hide());
+
         buildShowMore($more);
+        addArticleControl();
+        $('article').fadeIn(1000);
+      });
+    }
+
+    function addArticleControl() {
+      $('article:not(.expandable)').each(function() {
+        new Article($(this));
       });
     }
 
     var _url;
     buildShowMore($('body'));
+    addArticleControl();
   })();
 
 
-  function Article($context) {
+  function Article(_$context) {
     function buildReadMore() {
-      var $holder = $context.find('.read-more').remove();
-      var $anchor = $holder.find('a');
-      _url = $anchor.attr('href'); 
+      _$context.addClass('expandable');
+      _url = _$anchor.attr('href'); 
       if (_url) {
-        $anchor.attr('href', '#' + $context.attr('id'))
-               .click(showMoreClicked);
+        _$anchor.removeAttr('href')
+                .click(readMoreClicked);
       }
     }
 
-    function showMoreClicked(e) {
-      //$(e.currentTarget).remove();
-      $.get(_url, function(text) {
-        var $more = $(text);
-        $context.find('section').html($more.find('section'));
-      });
+    function swapAnchorText() {
+      var alt_text = _$anchor.data('alt-text');
+      _$anchor.data('alt-text', _$anchor.html());
+      _$anchor.html(alt_text);
+    }
+
+    function readMoreClicked(e) {
+
+      if (_$context.hasClass('expanded')) {
+        _$context.removeClass('expanded');
+        swapAnchorText();
+        _$section.html(_$section.data('orig-text'))
+                 .css('height', '');
+
+      } else {
+        _$section.css('height', _$section.height());
+        
+        $.get(_url, function(html) {
+          var $text = $(html).find('article section');
+          _$off_sight.html($text)
+                     .css('width', _$section.width());
+          var new_height = _$off_sight.find('section').height();
+
+          swapAnchorText();
+          _$context.addClass('expanded');
+          _$section.data('orig-text', _$section.html())
+                   .html($text.html())
+                   .animate({'height': new_height}, 1000);
+        });
+      }
     }
 
     var _url;
+    var _$anchor = _$context.find('.read-more a');
+    var _$section = _$context.find('section');
     buildReadMore();
   }
 
+  var _$off_sight = $('.off-sight');
 });

@@ -11,8 +11,10 @@
       echo $this->Html->css('normalize');
       echo $this->Html->css('main');
 
-      echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>';
-      echo $this->Html->script('main');
+      if ($this->here == '/') {
+        echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>';
+        echo $this->Html->script('main');
+      }
     ?>
   </head>
 <body>
@@ -25,5 +27,6 @@
       <span>&copy; 2012 Dustin Moore<span>
     </footer>
   </div>
+  <div class="off-sight"></div>
 </body>
 </html>

@@ -11,10 +11,12 @@
     <?php echo $article['Article']['body']; ?>...</p>
   </section>
   <div class="read-more">
-  <?php echo $this->Html->link('Read More', array(
-    'controller' => 'articles',
-    'action' => 'view',
-    $article['Article']['id'])); ?>
+  <?php echo $this->Html->link('Read More',
+    array(
+      'controller' => 'articles',
+      'action' => 'view',
+      $article['Article']['id']),
+    array('data-alt-text' => 'Collapse')); ?>
   </div>
 </article>
 <?php endforeach; ?>

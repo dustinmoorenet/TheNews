@@ -11,20 +11,20 @@
   </section>
 </article>
 
-  <?php 
-  if ($article['neighbors']['prev']) { ?>
-    <span class="prev">
-    <?php echo $this->Html->link('Previous', array(
-      'controller' => 'articles',
-      'action' => 'view',
-      $article['neighbors']['prev']['Article']['id'])); ?>
-    </span>
-  <?php }
-  if ($article['neighbors']['next']) { ?>
-    <span class="next">
-    <?php echo $this->Html->link('Next', array(
-      'controller' => 'articles',
-      'action' => 'view',
-      $article['neighbors']['next']['Article']['id'])); ?>
-    </span>
-  <?php } ?>
+<?php 
+if ($article['neighbors']['prev']) { ?>
+  <span class="prev">
+  <?php echo $this->Html->link('Previous', array(
+    'controller' => 'articles',
+    'action' => 'view',
+    $article['neighbors']['prev']['Article']['id'])); ?>
+  </span>
+<?php }
+if ($article['neighbors']['next']) { ?>
+  <span class="next">
+  <?php echo $this->Html->link('Next', array(
+    'controller' => 'articles',
+    'action' => 'view',
+    $article['neighbors']['next']['Article']['id'])); ?>
+  </span>
+<?php } ?>

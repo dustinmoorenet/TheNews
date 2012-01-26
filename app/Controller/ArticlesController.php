@@ -22,7 +22,9 @@ class ArticlesController extends AppController {
   public function view($id = null) {
     $this->Article->id = $id;
     $article = $this->Article->read();
-    $article['neighbors'] = $this->Article->find('neighbors', array('field' => 'published', 'value' => $article['Article']['published']));
+    $article['neighbors'] = $this->Article->find('neighbors',
+      array('field' => 'published',
+            'value' => $article['Article']['published']));
 
     $this->set('article', $article);
   }
