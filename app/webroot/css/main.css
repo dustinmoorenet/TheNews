@@ -1,16 +1,21 @@
 body {
   /* IE10 */ 
-  background-image: -ms-radial-gradient(center, circle farthest-corner, #000000 0%, #FFFFFF 100%);
+  background-image: -ms-linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
+  
   /* Mozilla Firefox */ 
-  background-image: -moz-radial-gradient(center, circle farthest-corner, #000000 0%, #FFFFFF 100%);
+  background-image: -moz-linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
+  
   /* Opera */ 
-  background-image: -o-radial-gradient(center, circle farthest-corner, #000000 0%, #FFFFFF 100%);
+  background-image: -o-linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
+  
   /* Webkit (Safari/Chrome 10) */ 
-  background-image: -webkit-gradient(radial, center center, 0, center center, 509, color-stop(0, #000000), color-stop(1, #FFFFFF));
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFFFFF), color-stop(0.5, #ADADAD), color-stop(1, #FFFFFF));
+  
   /* Webkit (Chrome 11+) */ 
-  background-image: -webkit-radial-gradient(center, circle farthest-corner, #000000 0%, #FFFFFF 100%);
+  background-image: -webkit-linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
+  
   /* Proposed W3C Markup */ 
-  background-image: radial-gradient(center, circle farthest-corner, #000000 0%, #FFFFFF 100%);
+  background-image: linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
 }
 
 #container {
@@ -40,7 +45,8 @@ body {
   color: #777;
 }
 
-article {
+article,
+.show-more {
   background: #444;
   color: #fafafa;
   color: rgba(255,255,255,.90);
@@ -122,6 +128,16 @@ span.prev {
 
 span.next {
   float: right;
+}
+
+.show-more {
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.show-more:hover {
+  background: #666;
 }
 
 footer {

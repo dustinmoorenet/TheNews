@@ -10,8 +10,9 @@
     
       echo $this->Html->css('normalize');
       echo $this->Html->css('main');
-    
-      echo $scripts_for_layout;
+
+      echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>';
+      echo $this->Html->script('main');
     ?>
   </head>
 <body>
