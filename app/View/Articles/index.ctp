@@ -8,7 +8,7 @@
     </time>
   </span>
   <section>
-    <?php echo $article['Article']['body']; ?>...</p>
+    <?php echo $article['Article']['body']; ?>...
   </section>
   <div class="read-more">
   <?php echo $this->Html->link('Read More',

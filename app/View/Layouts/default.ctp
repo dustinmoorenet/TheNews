@@ -11,7 +11,8 @@
       echo $this->Html->css('normalize');
       echo $this->Html->css('main');
 
-      if ($this->here == '/') {
+      echo $this->Html->script('modernizr.min.js');
+      if (Router::url('/') == $this->here) {
         echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>';
         echo $this->Html->script('main');
       }
@@ -24,7 +25,7 @@
       <?php echo $content_for_layout; ?>
     </section>
     <footer>
-      <span>&copy; 2012 Dustin Moore<span>
+      <span>&copy; 2012 Dustin Moore</span>
     </footer>
   </div>
   <div class="off-sight"></div>

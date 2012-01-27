@@ -5,6 +5,14 @@ Run :
 git clone git://github.com/dustinmoorenet/TheNews.git
 
 Setup web server for a cakePHP website (http://book.cakephp.org/2.0/en/installation.html)
+Mostly you just need to enable rewrite for your given directory
+  <Directory "/path/to/TheNews">
+          AllowOverride All
+          Order allow,deny
+          Allow from all
+
+  </Directory>
+
 
 Create a database and user with permissions to query the tables.
 Run schema.sql to setup the table and populate the data.
@@ -13,9 +21,20 @@ Edit app/Config/database.php
 Set the default database config to your specific parameters.
 
 -- Use --
-Go to the main page (http://<host>/<sub uri if any>/)
-This page has Javascript enabled.
+The site can be used in two ways: fancy single page mode and boring multi-page mode
+Both modes use the same html pages, its just that in single page mode, jQuery is applied over the page to manage loading up all the relevant parts of each html page into the single loaded page.
 
+- Single Page -
+Go to the main page (http://<host>/<sub uri if any>/)
+5 articles are loaded up initially, but more are added to the bottom when the user clicks the "Show More" button.  When the user wants to read the full article, clicking the "Read More" link expands the article on the page.
+
+example: http://file-server.dandamoore.com/TheNews
+
+
+- Multiple Pages -
 Go to the article index page (http://<host>/<sub uri if any>/articles/index)
-This page has no Javascript.
+5 articles are loaded.  If the user wants to see more articles "Next" and "Previous" links are provided to load another page of articles.  If the user wants to read the full article, clicking the "Read More" opens a new page with the full article.  The user can navigate between each full article by using the "Next" and "Previous" links at the bottom of the page.  If the user wants to get back to the main page (the single-page-mode page in this case), they click the heading "The News".
+
+example: http://file-server.dandamoore.com/TheNews/articles/index
+
 
