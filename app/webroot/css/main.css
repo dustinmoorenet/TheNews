@@ -20,13 +20,86 @@ body {
 
 #container {
   margin: 10px auto;
-  width: 900px;
+  width: 1024px;
   background: #fafafa;
   padding: 20px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
 }
+
+#ad_1 iframe {
+  border: 0;
+  width: 200px; 
+  height: 400px;
+  float: right;
+}
+
+section#content {
+  width: 800px;
+  float: left;
+}
+
+footer {
+  clear: both;
+}
+
+@media screen {
+  #container {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #container {
+    margin: 0;
+    width: auto;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
+  #ad_1 {
+    text-align: center;
+  }
+
+  #ad_1 iframe {
+    width: 500px; 
+    height: 100px;
+    float: none;
+  }
+
+  section#content {
+    width: auto;
+    float: none;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  #container {
+    margin: 0;
+    width: auto;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
+  #ad_1 {
+    text-align: center;
+  }
+
+  #ad_1 iframe {
+    width: 150px; 
+    height: 50px;
+    float: none;
+  }
+
+  section#content {
+    width: auto;
+    float: none;
+  }
+}
+
 
 #container > header {
   font-size: 2em;

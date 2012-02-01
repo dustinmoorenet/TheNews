@@ -9,7 +9,7 @@
       echo $this->Html->meta('icon');
     
       echo $this->Html->css('normalize');
-      echo $this->Html->css('main');
+      echo $this->Html->css('main', null, array('media' => 'screen'));
 
       echo $this->Html->script('modernizr.min.js');
       if (Router::url('/') == $this->here) {
@@ -21,6 +21,7 @@
 <body>
   <div id="container">
     <header><?php echo $this->Html->link('The News', '/'); ?></header>
+    <div id="ad_1"><iframe src="ads/bear.html"></iframe></div>
     <section id="content">
       <?php echo $content_for_layout; ?>
     </section>

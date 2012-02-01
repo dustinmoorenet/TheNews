@@ -40,8 +40,8 @@ $(function() {
       _$context.addClass('expandable');
       _url = _$anchor.attr('href'); 
       if (_url) {
-        _$anchor.removeAttr('href')
-                .click(readMoreClicked);
+        _$anchor.removeAttr('href');
+        _$context.click(readMoreClicked);
       }
     }
 
