@@ -31,7 +31,7 @@
         <li><?php echo $this->Html->link('About Us', array('controller' => 'pages', 'action' => 'display', 'about_us')); ?></li>
       </ul>
     </nav>
-    <div id="ad_1"><iframe src="<?php echo Router::url('/') . 'ads/bear.html' ?>"></iframe></div>
+    <div id="ad_1"><iframe src="<?php echo Router::url('/') . 'ads/bear.html' ?>" frameBorder="0"></iframe></div>
     <section id="content">
       <?php echo $content_for_layout; ?>
     </section>

@@ -5,18 +5,26 @@
 
     img { display: none; } 
 
-    @media screen and (width: 150px) {
-      #small { display: inline; }
-    }
-
     @media screen and (width: 200px) {
       #thin { display: inline; }
+    }
+
+    @media screen and (width: 150px) {
+      #small { display: inline; }
     }
 
     @media screen and (width: 750px) {
       #wide { display: inline; }
     }
+
   </style>
+
+  <![if lt IE 9]>
+  <style>
+      #thin { display: inline; }
+  </style>
+  <![endif]>
+
 <body>
   <img id="small" src="http://dummyimage.com/150x45/000/fff" />
   <img id="thin" src="http://dummyimage.com/200x395/000/fff" />
