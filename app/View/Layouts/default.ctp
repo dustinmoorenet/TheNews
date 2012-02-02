@@ -21,16 +21,7 @@
 <body>
   <div id="container">
     <header><?php echo $this->Html->link('The News', '/'); ?></header>
-    <nav>
-      <ul>
-        <li><?php echo $this->Html->link('Home', '/'); ?></li>
-        <li><?php echo $this->Html->link('Politics', array('controller' => 'pages', 'action' => 'display', '')); ?></li>
-        <li><?php echo $this->Html->link('Sports', array('controller' => 'pages', 'action' => 'display', '')); ?></li>
-        <li><?php echo $this->Html->link('Technology', array('controller' => 'pages', 'action' => 'display', '')); ?></li>
-        <li><?php echo $this->Html->link('Editors', array('controller' => 'pages', 'action' => 'display', 'editors')); ?></li>
-        <li><?php echo $this->Html->link('About Us', array('controller' => 'pages', 'action' => 'display', 'about_us')); ?></li>
-      </ul>
-    </nav>
+    <?php echo $this->element('nav'); ?>
     <div id="ad_1"><iframe src="<?php echo Router::url('/') . 'ads/bear.html' ?>" frameBorder="0"></iframe></div>
     <section id="content">
       <?php echo $content_for_layout; ?>

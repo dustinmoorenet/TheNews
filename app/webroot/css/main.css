@@ -179,10 +179,26 @@ article header {
   padding: 5px;
   margin: 0 0 3px;
   font-size: 1.2em;
+  min-height: 23px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   border: 2px solid #fff;
+}
+
+article header em {
+  display: block;
+  float: right;
+  font-size: .6em;
+  line-height: 1.5em;
+  background: #5f8dd3;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 2px #2b5699;
+  margin: 0;
+  padding: 1px 3px;
 }
 
 article > span {
@@ -205,7 +221,6 @@ article div.read-more {
 article a,
 article a:visited {
   color: #fafafa;
-  color: rgba(255,255,255,.90);
   text-decoration: none;
   border-bottom: dotted 1px #fafafa;
   border-bottom: dotted 1px rgba(255,255,255,.90);
@@ -249,6 +264,15 @@ span.next {
 
 .show-more:hover {
   background: #666;
+}
+
+.person-profile img {
+  float: left;
+  margin: 0 15px 15px 0;
+}
+
+.person-profile {
+  margin-bottom: 35px;
 }
 
 .off-sight {

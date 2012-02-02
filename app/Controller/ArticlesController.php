@@ -10,8 +10,18 @@ class ArticlesController extends AppController {
     )
   );
 
-  public function index() {
-    $articles = $this->paginate('Article');
+  public function category($id = null) {
+    $this->redirect(array('action' => 'index', 'category', $id));
+  }
+
+  public function index($type = null, $type_id = null) {
+
+    if ($type = 'category' && $type_id != null) {
+      $articles = $this->paginate('Article', array('Category.id =' => $type_id));
+    } else {
+      $articles = $this->paginate('Article');
+    }
+
     foreach ($articles as &$article) {
       $body = $article['Article']['body'];
       $article['Article']['body'] = substr($body, 0, strpos($body, ' ', 256));

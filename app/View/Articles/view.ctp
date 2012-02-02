@@ -1,5 +1,8 @@
 <article>
-  <header><?php echo $article['Article']['title']; ?></header>
+  <header>
+    <em><?php echo $article['Category']['name']; ?></em>
+    <?php echo $article['Article']['title']; ?>
+  </header>
   <span>by <?php echo $article['Article']['author']; ?> -
     <time pubdate="<?php echo $article['Article']['published']; ?>">
       <?php $date = new DateTime($article['Article']['published']);
