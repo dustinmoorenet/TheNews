@@ -12,10 +12,8 @@
       echo $this->Html->css('main', null, array('media' => 'screen'));
 
       echo $this->Html->script('modernizr.min.js');
-      if (Router::url('/') == $this->here) {
-        echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>';
-        echo $this->Html->script('main');
-      }
+      echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>';
+      echo $this->Html->script('main');
     ?>
   </head>
 <body>
