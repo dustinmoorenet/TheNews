@@ -9,6 +9,7 @@
     <?php
       echo $this->Html->meta('icon');
     
+      echo '<link href="http://fonts.googleapis.com/css?family=Homenaje" rel="stylesheet" type="text/css">';
       echo $this->Html->css('normalize');
       echo $this->Html->css('main', null, array('media' => 'screen'));
 

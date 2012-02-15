@@ -1,4 +1,6 @@
 body {
+  font-family: 'Homenaje', sans-serif;
+
   /* IE10 */ 
   background-image: -ms-linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
   
