@@ -72,7 +72,12 @@ $(function() {
           _$context.addClass('expanded');
           _$section.data('orig-text', _$section.html())
                    .html($text.html())
-                   .animate({'height': new_height}, 1000);
+                   .animate({'height': new_height}, {
+            duration: 1000,
+            complete: function() {
+              $(this).css('height', 'auto');
+            }
+          });
         });
       }
     }
