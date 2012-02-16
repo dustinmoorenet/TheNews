@@ -1,35 +1,57 @@
 body {
-  font-family: 'Homenaje', sans-serif;
-
-  /* IE10 */ 
-  background-image: -ms-linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
-  
-  /* Mozilla Firefox */ 
-  background-image: -moz-linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
-  
-  /* Opera */ 
-  background-image: -o-linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
-  
-  /* Webkit (Safari/Chrome 10) */ 
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFFFFF), color-stop(0.5, #ADADAD), color-stop(1, #FFFFFF));
-  
-  /* Webkit (Chrome 11+) */ 
-  background-image: -webkit-linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
-  
-  /* Proposed W3C Markup */ 
-  background-image: linear-gradient(left, #FFFFFF 0%, #ADADAD 50%, #FFFFFF 100%);
+  font-family: 'Share', cursive; 
+  background: #76a07e;
 }
 
 #container {
+  position: relative;
   margin: 10px auto;
   width: 1024px;
-  background: #fafafa;
-  padding: 20px;
+  background: #eee url('/img/flower_upper_shadow.png') -50px 0px no-repeat;
+}
+
+#container > header {
+  position: relative; 
+  background: #506c55;
+  height: 200px;
+  color: #aaa;
+  color: rgba(255,255,255,.50);
+}
+
+#header-lower {
+  position: absolute;
+  left: -50px;
+  top: 0;
+  background: url('/img/flower_lower.png') no-repeat;
+  width: 300px;
+  height: 200px;
+}
+
+#header-middle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 311px;
+  line-height: 250px;
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: 130px;
+}
+
+#header-upper {
+  position: absolute;
+  left: -50px;
+  top: 0;
+  background: url('/img/flower_upper.png') no-repeat;
+  width: 300px;
+  height: 311px;
 }
 
 nav {
-  width: 100px;
+  width: 130px;
   float: left;
+  margin: 110px 0 0 0;
+  padding: 0 5px 0 30px;
 }
 
 nav ul {
@@ -48,10 +70,12 @@ nav a:hover {
 }
 
 #ad_1 iframe {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   border: 0;
-  width: 200px; 
-  height: 400px;
-  float: right;
+  width: 480px; 
+  height: 175px;
 }
 
 section#content {
@@ -80,14 +104,10 @@ footer {
     border-radius: 0;
   }
 
-  #container > header {
-    margin: 0 0 5px;
-  }
-
   nav {
     width: auto;
     margin: 0 0 10px;
-    padding: 0 0 5px;
+    padding: 5px 0;
     text-align: center;
     float: none;
     border-bottom: solid 2px #444;
@@ -111,51 +131,53 @@ footer {
   }
 
   #ad_1 iframe {
-    width: 750px; 
-    height: 100px;
-    float: none;
+    width: 600px; 
+    height: 120px;
+    position: relative;
   }
 
   section#content {
     width: auto;
     float: none;
+    padding: 0 10px;
   }
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 632px) {
+  #container {
+    background: #eee;
+  }
+
+  #container > header {
+    height: auto;
+  }
+  
+  #header-lower {
+    display: none;
+  }
+  
+  #header-middle {
+    position: relative;
+    height: auto;
+    line-height: normal;
+    margin: 0;
+    padding-left: 160px;
+    background: url('/img/flower_combine.png') -120px -20px no-repeat;
+  }
+  
+  #header-upper {
+    display: none;
+  }
+
   #ad_1 {
     clear: both;
   }
 
   #ad_1 iframe {
     width: 150px; 
-    height: 50px;
+    height: 85px;
   }
-}
-
-
-#container > header {
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px 0;
-  margin: 0 0 10px;
-  border: solid 2px #444;
-  border: solid 2px rgba(0,0,0,.70);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-#container > header a,
-#container > header a:visited {
-  text-decoration: none;
-  color: #444;
-}
-
-#container > header a:hover {
-  color: #777;
 }
 
 p {
@@ -164,28 +186,20 @@ p {
 
 article,
 .show-more {
-  background: #444;
-  color: #fafafa;
   padding: 10px;
-  margin: 0 0 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  margin: 10px 0 0;
 }
 
 article header {
+  background: #76a07e;
   font-weight: bold;
-  background: #fafafa;
-  background: rgba(255,255,255,.90);
-  color: #444;
   padding: 5px;
   margin: 0 0 3px;
   font-size: 1.2em;
   min-height: 23px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  border: 2px solid #fff;
+  -webkit-border-radius: 0 3px 0 3px;
+  -moz-border-radius: 0 3px 0 3px;
+  border-radius: 0 3px 0 3px;
 }
 
 article header em {
@@ -193,12 +207,12 @@ article header em {
   float: right;
   font-size: .6em;
   line-height: 1.5em;
-  background: #5f8dd3;
+  background: #506c55;
   color: #fff;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  border: solid 2px #2b5699;
+  border: solid 2px #2e3f32;
   margin: 0;
   padding: 1px 3px;
 }
@@ -222,15 +236,15 @@ article div.read-more {
 
 article a,
 article a:visited {
-  color: #fafafa;
+  color: #444;
   text-decoration: none;
-  border-bottom: dotted 1px #fafafa;
-  border-bottom: dotted 1px rgba(255,255,255,.90);
+  border-bottom: dotted 1px #444;
+  border-bottom: dotted 1px rgba(0,0,0,.70);
   cursor: pointer;
 }
 
 article a:hover {
-  color: #eee;
+  color: #777;
   border: 0;
 }
 
@@ -245,8 +259,7 @@ span a:visited {
 }
 
 span a:hover {
-  color: #eee;
-  color: rgba(0,0,0,.60);
+  color: #777;
   border: 0;
 }
 
@@ -265,7 +278,8 @@ span.next {
 }
 
 .show-more:hover {
-  background: #666;
+  color: #eee;
+  background: #76a07e;
 }
 
 .person-profile img {

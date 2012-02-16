@@ -9,7 +9,7 @@
     <?php
       echo $this->Html->meta('icon');
     
-      echo '<link href="http://fonts.googleapis.com/css?family=Homenaje" rel="stylesheet" type="text/css">';
+      echo '<link href="http://fonts.googleapis.com/css?family=Share:400,400italic,700,700italic" rel="stylesheet" type="text/css">';
       echo $this->Html->css('normalize');
       echo $this->Html->css('main', null, array('media' => 'screen'));
 
@@ -20,9 +20,13 @@
   </head>
 <body>
   <div id="container">
-    <header><?php echo $this->Html->link('The News', '/'); ?></header>
+    <header>
+      <div id="header-lower"></div>
+      <div id="header-middle">Flower Post</div>
+      <div id="header-upper"></div>
+    </header>
     <?php echo $this->element('nav'); ?>
-    <div id="ad_1"><iframe src="<?php echo Router::url('/') . 'ads/bear.html' ?>" frameBorder="0"></iframe></div>
+    <div id="ad_1"><iframe src="<?php echo Router::url('/') . 'ads/dons_discount.html' ?>" frameBorder="0"></iframe></div>
     <section id="content">
       <?php echo $content_for_layout; ?>
     </section>

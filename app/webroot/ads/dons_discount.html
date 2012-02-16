@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body { margin: 0; padding: 0;} 
+
+    img { display: none; } 
+
+    @media screen and (width: 480px) {
+      #big { display: inline; }
+    }
+
+    @media screen and (width: 150px) {
+      #small { display: inline; }
+    }
+
+    @media screen and (width: 600px) {
+      #wide { display: inline; }
+    }
+
+  </style>
+
+  <!--[if lt IE 9]>
+  <style>
+      #big { display: inline; }
+  </style>
+  <![endif]-->
+
+<body>
+  <img id="big" src="ad_dd_shrubbery_480x170.png" />
+  <img id="small" src="ad_dd_shrubbery_150x80.png" />
+  <img id="wide" src="ad_dd_shrubbery_600x115.png" />
+</body>
+</html>
