@@ -7,7 +7,7 @@ body {
   position: relative;
   margin: 10px auto;
   width: 1024px;
-  background: #eee url('/img/flower_upper_shadow.png') -50px 0px no-repeat;
+  background: #eee url('../img/flower_upper_shadow.png') -50px 0px no-repeat;
 }
 
 #container > header {
@@ -22,7 +22,7 @@ body {
   position: absolute;
   left: -50px;
   top: 0;
-  background: url('/img/flower_lower.png') no-repeat;
+  background: url('../img/flower_lower.png') no-repeat;
   width: 300px;
   height: 200px;
 }
@@ -42,7 +42,7 @@ body {
   position: absolute;
   left: -50px;
   top: 0;
-  background: url('/img/flower_upper.png') no-repeat;
+  background: url('../img/flower_upper.png') no-repeat;
   width: 300px;
   height: 311px;
 }
@@ -163,7 +163,7 @@ footer {
     line-height: normal;
     margin: 0;
     padding-left: 160px;
-    background: url('/img/flower_combine.png') -120px -20px no-repeat;
+    background: url('../img/flower_combine.png') -120px -20px no-repeat;
   }
   
   #header-upper {
